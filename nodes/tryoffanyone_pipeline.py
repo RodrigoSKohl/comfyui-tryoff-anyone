@@ -167,4 +167,4 @@ class TryOffAnyone:
         image = (image / 2 + 0.5).clamp(0, 1)
         print(f"Final Image - min: {image.min()}, max: {image.max()}")
         image = image.permute(0, 2, 3, 1)
-        return image, masked_image
+        return image
