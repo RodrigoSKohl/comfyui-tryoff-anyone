@@ -1,0 +1,14 @@
+[project]
+name = "tryoff-anyone"
+description = "Node to tryoff clothes"
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/RodrigoSKohl/"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "rodrigoskohl"
+DisplayName = "TryOff Anyone"
+Icon = ""
