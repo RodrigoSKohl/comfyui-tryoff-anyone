@@ -45,11 +45,13 @@ class TryOffAnyoneNode:
         return output_image 
     
 def image_preprocess(image: torch.Tensor, target_height, target_width):
-    image = image.permute(0, 3, 1, 2)
+    print(f"Original Image shape: {image.shape}")
+    image = image.permute(0, 3, 1, 2) 
     if image.shape[1] == 4:
         image = image[:, :3, :, :]
     image = F.interpolate(image, size=(target_height, target_width), mode='bilinear', align_corners=False)
     image = image * 2 - 1
+    print(f"Preprocessed Image shape: {image.shape}")
     return image
 
 def mask_preprocess(mask: torch.Tensor, target_height, target_width):

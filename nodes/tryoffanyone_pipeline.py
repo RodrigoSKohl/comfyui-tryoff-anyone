@@ -166,5 +166,8 @@ class TryOffAnyone:
         print(f"Decoded Image - min: {image.min()}, max: {image.max()}")
         image = (image / 2 + 0.5).clamp(0, 1)
         print(f"Final Image - min: {image.min()}, max: {image.max()}")
+        print(f"Image shape before permute: {image.shape}")
         image = image.permute(0, 2, 3, 1)
+        image = image.unsqueeze(0)
+        print(f"Image shape after permute: {image.shape}")
         return image
