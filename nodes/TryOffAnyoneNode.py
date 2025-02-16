@@ -25,7 +25,7 @@ class TryOffAnyoneNode:
         }
 
     RETURN_TYPES = ("IMAGE",)  # Retorna tanto a imagem gerada quanto o preview
-    RETURN_NAMES = ("output_image")
+    RETURN_NAMES = ("IMAGE",)
     FUNCTION = "process"
     CATEGORY = "inpainting"
 
